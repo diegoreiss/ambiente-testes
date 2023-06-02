@@ -41,7 +41,6 @@ public class AcessarSiteEmpresaUtil extends WebDriverUtil {
         String xpathH2 = "/html/body/footer/div[1]/div/div[2]/h2";
 
         WebElement h2NomeEmpresa = this.webDriver.findElement(By.xpath(xpathH2));
-        new Actions(this.webDriver).moveToElement(h2NomeEmpresa).perform();
 
         Assert.assertEquals(nomeEmpresaEsperado, h2NomeEmpresa.getText());
 
